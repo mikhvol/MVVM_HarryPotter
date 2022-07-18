@@ -7,69 +7,65 @@
 
 import UIKit
 
-class StartMainScreenView: UIView {
+protocol FacultyTappable: class {
+    var gryffindorButtonOnTap: (()->())? { get set}
+    var hufflepuffButtonOnTap: (()->())? { get set}
+    var ravenclawButtonOnTap: (()->())? { get set}
+    var slytherinButtonOnTap: (()->())? { get set}
+}
+
+final class StartMainScreenView: UIView {
     
-    private var gryffindorButtonOnTap: ()->() = {}
-    private var hufflepuffButtonOnTap: ()->() = {}
-    private var ravenclawButtonOnTap: ()->() = {}
-    private var slytherinButtonOnTap: ()->() = {}
+    weak var delegate: FacultyTappable?
     
     private var topTitleImageView: UIImageView! {
-            didSet {
-                self.topTitleImageView.image = UIImage(named: "topTitle.jpg")
-                self.topTitleImageView.translatesAutoresizingMaskIntoConstraints = false
-                self.topTitleImageView.isUserInteractionEnabled = true
-                self.topTitleImageView.contentMode = .scaleAspectFill
-            }
+        didSet {
+            self.topTitleImageView.image = UIImage(named: "topTitle")
+            self.topTitleImageView.translatesAutoresizingMaskIntoConstraints = false
+            self.topTitleImageView.contentMode = .scaleAspectFill
         }
+    }
     
     private var bottomImageView: UIImageView! {
-            didSet {
-                self.topTitleImageView.image = UIImage(named: "death")
-                self.topTitleImageView.translatesAutoresizingMaskIntoConstraints = false
-                self.topTitleImageView.isUserInteractionEnabled = true
-                self.topTitleImageView.contentMode = .scaleAspectFill
-                self.topTitleImageView.layer.cornerRadius = 10
-                self.topTitleImageView.clipsToBounds = true
-            }
+        didSet {
+            self.bottomImageView.image = UIImage(named: "death")
+            self.bottomImageView.translatesAutoresizingMaskIntoConstraints = false
+            self.bottomImageView.contentMode = .scaleAspectFill
         }
+    }
     
     private var gryffindorButton: UIButton! {
-            didSet {
-                self.gryffindorButton.translatesAutoresizingMaskIntoConstraints = false
-                self.gryffindorButton.setImage(UIImage(named: "grifEmbl"), for: .normal)
-                self.gryffindorButton.addTarget(self, action: #selector(self.gryffindorButtonTapped), for: .touchUpInside)
-                self.gryffindorButton.setTitleColor(.systemBlue, for: .normal)
-            }
+        didSet {
+            self.gryffindorButton.translatesAutoresizingMaskIntoConstraints = false
+            self.gryffindorButton.setImage(UIImage(named: "grifEmbl"), for: .normal)
+            self.gryffindorButton.addTarget(self, action: #selector(self.gryffindorButtonTapped), for: .touchUpInside)
         }
+    }
     
     private var hufflepuffButton: UIButton! {
-            didSet {
-                self.hufflepuffButton.translatesAutoresizingMaskIntoConstraints = false
-                self.hufflepuffButton.addTarget(self, action: #selector(self.hufflepuffButtonTapped), for: .touchUpInside)
-                self.hufflepuffButton.setImage(UIImage(named: "hufflepufEmbl"), for: .normal)
-                self.hufflepuffButton.setTitleColor(.systemBlue, for: .normal)
-            }
+        didSet {
+            self.hufflepuffButton.translatesAutoresizingMaskIntoConstraints = false
+            self.hufflepuffButton.addTarget(self, action: #selector(self.hufflepuffButtonTapped), for: .touchUpInside)
+            self.hufflepuffButton.setImage(UIImage(named: "hufflepufEmbl"), for: .normal)
         }
+    }
     
     private var ravenclawButton: UIButton! {
-            didSet {
-                self.ravenclawButton.translatesAutoresizingMaskIntoConstraints = false
-                self.ravenclawButton.addTarget(self, action: #selector(self.ravenclawButtonTapped), for: .touchUpInside)
-                self.ravenclawButton.setImage(UIImage(named: "ravenEmbl"), for: .normal)
-                self.ravenclawButton.setTitleColor(.systemBlue, for: .normal)
-            }
+        didSet {
+            self.ravenclawButton.translatesAutoresizingMaskIntoConstraints = false
+            self.ravenclawButton.addTarget(self, action: #selector(self.ravenclawButtonTapped), for: .touchUpInside)
+            self.ravenclawButton.setImage(UIImage(named: "ravenEmbl"), for: .normal)
         }
+    }
     
     private var slytherinButton: UIButton! {
-            didSet {
-                self.slytherinButton.translatesAutoresizingMaskIntoConstraints = false
-                self.slytherinButton.addTarget(self, action: #selector(self.slytherinButtonTapped), for: .touchUpInside)
-                self.slytherinButton.setImage(UIImage(named: "slitherEmbl"), for: .normal)
-                self.slytherinButton.setTitleColor(.systemBlue, for: .normal)
-            }
+        didSet {
+            self.slytherinButton.translatesAutoresizingMaskIntoConstraints = false
+            self.slytherinButton.addTarget(self, action: #selector(self.slytherinButtonTapped), for: .touchUpInside)
+            self.slytherinButton.setImage(UIImage(named: "slitherEmbl"), for: .normal)
         }
-
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .blue
@@ -79,20 +75,22 @@ class StartMainScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    //MARK: - Actions
     @objc func gryffindorButtonTapped() {
-        self.gryffindorButtonOnTap()
+        delegate?.gryffindorButtonOnTap?()
     }
     
     @objc func hufflepuffButtonTapped() {
-        self.hufflepuffButtonOnTap()
+        delegate?.hufflepuffButtonOnTap?()
     }
     
     @objc func ravenclawButtonTapped() {
-        self.ravenclawButtonOnTap()
+        delegate?.ravenclawButtonOnTap?()
     }
     
     @objc func slytherinButtonTapped() {
-        self.slytherinButtonOnTap()
+        delegate?.slytherinButtonOnTap?()
     }
     
 }
