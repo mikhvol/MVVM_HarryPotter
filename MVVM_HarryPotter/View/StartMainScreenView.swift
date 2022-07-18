@@ -9,6 +9,11 @@ import UIKit
 
 class StartMainScreenView: UIView {
     
+    private var gryffindorButtonOnTap: ()->() = {}
+    private var hufflepuffButtonOnTap: ()->() = {}
+    private var ravenclawButtonOnTap: ()->() = {}
+    private var slytherinButtonOnTap: ()->() = {}
+    
     private var topTitleImageView: UIImageView! {
             didSet {
                 self.topTitleImageView.image = UIImage(named: "topTitle.jpg")
@@ -75,19 +80,19 @@ class StartMainScreenView: UIView {
     }
     
     @objc func gryffindorButtonTapped() {
-        
+        self.gryffindorButtonOnTap()
     }
     
     @objc func hufflepuffButtonTapped() {
-        
+        self.hufflepuffButtonOnTap()
     }
     
     @objc func ravenclawButtonTapped() {
-        
+        self.ravenclawButtonOnTap()
     }
     
     @objc func slytherinButtonTapped() {
-        
+        self.slytherinButtonOnTap()
     }
     
 }
