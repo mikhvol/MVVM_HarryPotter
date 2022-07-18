@@ -80,8 +80,8 @@
 		F42B196C2885DFE3009D0540 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F42B19532885C293009D0540 /* StartViewController.swift */,
 				F42B19702885E5E6009D0540 /* StartMainScreenView.swift */,
+				F42B19532885C293009D0540 /* StartViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

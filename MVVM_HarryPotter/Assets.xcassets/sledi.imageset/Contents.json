@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sledi.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
