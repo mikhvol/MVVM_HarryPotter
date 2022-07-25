@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA54BA457AD9D08836AC840F /* Pods_MVVM_HarryPotter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */; };
 		F42B19502885C293009D0540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B194F2885C293009D0540 /* AppDelegate.swift */; };
 		F42B19542885C293009D0540 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B19532885C293009D0540 /* StartViewController.swift */; };
 		F42B19592885C297009D0540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42B19582885C297009D0540 /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.release.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.release.xcconfig"; sourceTree = "<group>"; };
+		E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.debug.xcconfig"; sourceTree = "<group>"; };
 		F42B194C2885C293009D0540 /* MVVM_HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42B194F2885C293009D0540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42B19532885C293009D0540 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		F42B19652885C38D009D0540 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F42B19682885C461009D0540 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		F42B19702885E5E6009D0540 /* StartMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMainScreenView.swift; sourceTree = "<group>"; };
+		FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_HarryPotter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA54BA457AD9D08836AC840F /* Pods_MVVM_HarryPotter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FCDA810BB87B83E0D6EF133 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */,
+				7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACC8FAF0B2065AB264F27C37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F42B19432885C293009D0540 = {
 			isa = PBXGroup;
 			children = (
 				F42B194E2885C293009D0540 /* MVVM_HarryPotter */,
 				F42B194D2885C293009D0540 /* Products */,
+				1FCDA810BB87B83E0D6EF133 /* Pods */,
+				ACC8FAF0B2065AB264F27C37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +82,8 @@
 		F42B194E2885C293009D0540 /* MVVM_HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
-				F42B196C2885DFE3009D0540 /* View */,
-				F42B19642885C339009D0540 /* ServiceLayer */,
+				F434AC52288F4C7400DC7A48 /* StartScreen */,
+				F434AC53288F4C9500DC7A48 /* Layer */,
 				F42B194F2885C293009D0540 /* AppDelegate.swift */,
 				F42B19582885C297009D0540 /* Assets.xcassets */,
 				F42B195A2885C297009D0540 /* LaunchScreen.storyboard */,
@@ -86,6 +110,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F434AC52288F4C7400DC7A48 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F42B196C2885DFE3009D0540 /* View */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		F434AC53288F4C9500DC7A48 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F42B19642885C339009D0540 /* ServiceLayer */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F42B19602885C297009D0540 /* Build configuration list for PBXNativeTarget "MVVM_HarryPotter" */;
 			buildPhases = (
+				3636085CD29C5E25E6A3077F /* [CP] Check Pods Manifest.lock */,
 				F42B19482885C293009D0540 /* Sources */,
 				F42B19492885C293009D0540 /* Frameworks */,
 				F42B194A2885C293009D0540 /* Resources */,
+				C24B07AAA35E8CCFB5B940FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3636085CD29C5E25E6A3077F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM_HarryPotter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C24B07AAA35E8CCFB5B940FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F42B19482885C293009D0540 /* Sources */ = {
@@ -295,6 +379,7 @@
 		};
 		F42B19612885C297009D0540 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +399,7 @@
 		};
 		F42B19622885C297009D0540 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

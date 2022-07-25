@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol FacultyTappable: class {
     var gryffindorButtonOnTap: (()->())? { get set}
@@ -21,8 +22,7 @@ final class StartMainScreenView: UIView {
     private var backgroundImageView: UIImageView! {
         didSet {
             self.backgroundImageView.image = UIImage(named: "hogwarts")
-            //self.backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-            self.backgroundImageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            self.backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
             self.backgroundImageView.contentMode = .scaleAspectFill
         }
     }
@@ -88,14 +88,12 @@ final class StartMainScreenView: UIView {
     
     //MARK: - Setup Views
     func setupViews() {
-        self.backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200,
-                                                             height: 200))
-        self.topTitleImageView = UIImageView(frame: CGRect(x: 35, y: 0, width: 300,
-                                                           height: 250))
-        self.gryffindorButton = UIButton(frame: CGRect(x: 35, y: 250, width: 150, height: 150))
-        self.slytherinButton = UIButton(frame: CGRect(x: 190, y: 235, width: 180, height: 180))
-        self.hufflepuffButton = UIButton(frame: CGRect(x: 38, y: 425, width: 150, height: 150))
-        self.ravenclawButton = UIButton(frame: CGRect(x: 210, y: 429, width: 152, height: 152))
+        self.backgroundImageView = UIImageView()
+        self.topTitleImageView = UIImageView()
+        self.gryffindorButton = UIButton()
+        self.slytherinButton = UIButton()
+        self.hufflepuffButton = UIButton()
+        self.ravenclawButton = UIButton()
         
         self.addSubview(backgroundImageView)
         self.addSubview(topTitleImageView)
@@ -105,8 +103,56 @@ final class StartMainScreenView: UIView {
         self.addSubview(ravenclawButton)
     }
     
-    func setupConstraints() {
+    //MARK:- Setup Constraints
+    private func setupConstraints() {
+        setupConstraintsForBackgroundImage()
+        setupConstraintsForTopTitle()
+        setupConstraintsForButtons()
+    }
+    
+    private func setupConstraintsForBackgroundImage() {
+        backgroundImageView.snp.makeConstraints { make in
+            make.top.left.right.bottom.equalTo(self)
+        }
+    }
+    
+    private func setupConstraintsForTopTitle() {
+        topTitleImageView.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.equalTo(250)
+            make.top.equalTo(20)
+            make.centerX.equalTo(self.snp.centerX)
+        }
+    }
+    
+    private func setupConstraintsForButtons() {
+        gryffindorButton.snp.makeConstraints { make in
+            make.width.equalTo(150)
+            make.height.equalTo(150)
+            make.centerY.equalTo(snp.centerY)
+            make.leading.equalTo(35)
+        }
         
+        slytherinButton.snp.makeConstraints { make in
+            make.width.equalTo(180)
+            make.height.equalTo(180)
+            make.centerY.equalTo(snp.centerY)
+            make.trailing.equalTo(-8)
+        }
+        
+        hufflepuffButton.snp.makeConstraints { make in
+            make.width.equalTo(145)
+            make.height.equalTo(145)
+            make.top.equalTo(gryffindorButton.snp.bottom).inset(-30)
+            make.centerX.equalTo(gryffindorButton.snp.centerX)
+        }
+        
+        ravenclawButton.snp.makeConstraints { make in
+            make.width.equalTo(150)
+            make.height.equalTo(150)
+            make.top.equalTo(slytherinButton.snp.bottom).inset(-15)
+            make.centerX.equalTo(slytherinButton.snp.centerX)
+        }
     }
     
     //MARK: - Actions
@@ -132,14 +178,14 @@ final class StartMainScreenView: UIView {
     
     private func animateButton(button: UIButton!) {
         UIView.animate(withDuration: 0.6,
-            animations: {
-                button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            },
-            completion: { _ in
-                UIView.animate(withDuration: 0.6) {
-                    button.transform = CGAffineTransform.identity
-                }
-            })
+                       animations: {
+                        button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                       },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.6) {
+                            button.transform = CGAffineTransform.identity
+                        }
+                       })
     }
     
 }
