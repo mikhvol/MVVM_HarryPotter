@@ -14,6 +14,9 @@ class StartViewController: UIViewController {
     var ravenclawButtonOnTap:  (() -> ())?
     var slytherinButtonOnTap:  (() -> ())?
     
+    var viewModel = StudentsScreenViewModel()
+    
+    //MARK:- Lifecycle
     override func loadView() {
         let startMainScreenView = StartMainScreenView(frame: CGRect.zero)
         startMainScreenView.delegate = self
@@ -25,9 +28,13 @@ class StartViewController: UIViewController {
         self.setupActionsForFacultyButtons()
     }
     
+    //MARK:- Actions
     func setupActionsForFacultyButtons() {
         gryffindorButtonOnTap = {
             print("gryffindorButtonOnTap")
+            self.viewModel.getCharachters { charachters in
+                print(charachters!.first!.name)
+            }
         }
         
         hufflepuffButtonOnTap = {

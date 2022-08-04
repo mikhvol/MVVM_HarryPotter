@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		EA54BA457AD9D08836AC840F /* Pods_MVVM_HarryPotter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */; };
 		F41F8AA2289BE0B200BE379A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */; };
+		F41F8AA6289BF44200BE379A /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA5289BF44200BE379A /* DataFetcherService.swift */; };
+		F41F8AAA289BFF0F00BE379A /* CharacterHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */; };
+		F41F8AAF289C025A00BE379A /* WandHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AAE289C025A00BE379A /* WandHP.swift */; };
+		F41F8AB7289C6FDA00BE379A /* StudentsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AB6289C6FDA00BE379A /* StudentsScreenViewModel.swift */; };
 		F42B19502885C293009D0540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B194F2885C293009D0540 /* AppDelegate.swift */; };
 		F42B19542885C293009D0540 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B19532885C293009D0540 /* StartViewController.swift */; };
 		F42B19592885C297009D0540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42B19582885C297009D0540 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.release.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.release.xcconfig"; sourceTree = "<group>"; };
 		E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.debug.xcconfig"; sourceTree = "<group>"; };
 		F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		F41F8AA5289BF44200BE379A /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHP.swift; sourceTree = "<group>"; };
+		F41F8AAE289C025A00BE379A /* WandHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandHP.swift; sourceTree = "<group>"; };
+		F41F8AB6289C6FDA00BE379A /* StudentsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsScreenViewModel.swift; sourceTree = "<group>"; };
 		F42B194C2885C293009D0540 /* MVVM_HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42B194F2885C293009D0540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42B19532885C293009D0540 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +79,38 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F41F8AA8289BFEDB00BE379A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */,
+				F41F8AAE289C025A00BE379A /* WandHP.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F41F8AB3289C6F3500BE379A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F41F8AB4289C6F9200BE379A /* StudentsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F41F8AB5289C6FAF00BE379A /* ViewModel */,
+			);
+			path = StudentsScreen;
+			sourceTree = "<group>";
+		};
+		F41F8AB5289C6FAF00BE379A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F41F8AB6289C6FDA00BE379A /* StudentsScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F42B19432885C293009D0540 = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +132,10 @@
 		F42B194E2885C293009D0540 /* MVVM_HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
+				F41F8AA8289BFEDB00BE379A /* Models */,
 				F41F8AA0289BDFE800BE379A /* Extension */,
 				F434AC52288F4C7400DC7A48 /* StartScreen */,
+				F41F8AB4289C6F9200BE379A /* StudentsScreen */,
 				F434AC53288F4C9500DC7A48 /* Layer */,
 				F42B194F2885C293009D0540 /* AppDelegate.swift */,
 				F42B19582885C297009D0540 /* Assets.xcassets */,
@@ -108,6 +150,7 @@
 			children = (
 				F42B19652885C38D009D0540 /* NetworkService.swift */,
 				F42B19682885C461009D0540 /* NetworkDataFetcher.swift */,
+				F41F8AA5289BF44200BE379A /* DataFetcherService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -124,6 +167,7 @@
 		F434AC52288F4C7400DC7A48 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F41F8AB3289C6F3500BE379A /* ViewModel */,
 				F42B196C2885DFE3009D0540 /* View */,
 			);
 			path = StartScreen;
@@ -251,11 +295,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42B19542885C293009D0540 /* StartViewController.swift in Sources */,
+				F41F8AAF289C025A00BE379A /* WandHP.swift in Sources */,
+				F41F8AA6289BF44200BE379A /* DataFetcherService.swift in Sources */,
 				F42B19502885C293009D0540 /* AppDelegate.swift in Sources */,
 				F42B19662885C38D009D0540 /* NetworkService.swift in Sources */,
 				F42B19712885E5E6009D0540 /* StartMainScreenView.swift in Sources */,
+				F41F8AB7289C6FDA00BE379A /* StudentsScreenViewModel.swift in Sources */,
 				F42B19692885C461009D0540 /* NetworkDataFetcher.swift in Sources */,
 				F41F8AA2289BE0B200BE379A /* UIButton+Ext.swift in Sources */,
+				F41F8AAA289BFF0F00BE379A /* CharacterHP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
