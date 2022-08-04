@@ -175,6 +175,4 @@ final class StartMainScreenView: UIView {
         delegate?.slytherinButtonOnTap?()
         slytherinButton.startAnimation()
     }
-    
-    
 }
