@@ -158,34 +158,23 @@ final class StartMainScreenView: UIView {
     //MARK: - Actions
     @objc private func gryffindorButtonTapped() {
         delegate?.gryffindorButtonOnTap?()
-        animateButton(button: gryffindorButton)
+        gryffindorButton.startAnimation()
     }
     
     @objc private func hufflepuffButtonTapped() {
         delegate?.hufflepuffButtonOnTap?()
-        animateButton(button: hufflepuffButton)
+        hufflepuffButton.startAnimation()
     }
     
     @objc private func ravenclawButtonTapped() {
         delegate?.ravenclawButtonOnTap?()
-        animateButton(button: ravenclawButton)
+        ravenclawButton.startAnimation()
     }
     
     @objc private func slytherinButtonTapped() {
         delegate?.slytherinButtonOnTap?()
-        animateButton(button: slytherinButton)
+        slytherinButton.startAnimation()
     }
     
-    private func animateButton(button: UIButton!) {
-        UIView.animate(withDuration: 0.6,
-                       animations: {
-                        button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-                       },
-                       completion: { _ in
-                        UIView.animate(withDuration: 0.6) {
-                            button.transform = CGAffineTransform.identity
-                        }
-                       })
-    }
     
 }
