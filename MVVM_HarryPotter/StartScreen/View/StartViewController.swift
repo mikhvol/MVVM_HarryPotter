@@ -28,17 +28,16 @@ class StartViewController: UIViewController {
         self.setupActionsForFacultyButtons()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     //MARK:- Actions
     func setupActionsForFacultyButtons() {
         gryffindorButtonOnTap = {
-            print("gryffindorButtonOnTap")
-            self.viewModel.getCharachters { charachters in
-                guard let charachters = charachters else { return }
-                for char in charachters {
-                    print(char.house)
-                }
-                
-            }
+            let studentsVC = StudentsScreenViewController()
+            self.navigationController?.pushViewController(studentsVC, animated: true)
         }
         
         hufflepuffButtonOnTap = {

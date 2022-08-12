@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA54BA457AD9D08836AC840F /* Pods_MVVM_HarryPotter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */; };
 		F41CB23128A66BFC004D8A51 /* StartMainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41CB23028A66BFC004D8A51 /* StartMainScreenViewModel.swift */; };
+		F41CB23528A67165004D8A51 /* StudentsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41CB23428A67165004D8A51 /* StudentsScreenViewController.swift */; };
 		F41F8AA2289BE0B200BE379A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */; };
 		F41F8AA6289BF44200BE379A /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA5289BF44200BE379A /* DataFetcherService.swift */; };
 		F41F8AAA289BFF0F00BE379A /* CharacterHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */; };
@@ -27,6 +28,7 @@
 		7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.release.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.release.xcconfig"; sourceTree = "<group>"; };
 		E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.debug.xcconfig"; sourceTree = "<group>"; };
 		F41CB23028A66BFC004D8A51 /* StartMainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMainScreenViewModel.swift; sourceTree = "<group>"; };
+		F41CB23428A67165004D8A51 /* StudentsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsScreenViewController.swift; sourceTree = "<group>"; };
 		F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		F41F8AA5289BF44200BE379A /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHP.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F41CB23328A6712D004D8A51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F41CB23428A67165004D8A51 /* StudentsScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F41F8AA0289BDFE800BE379A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		F41F8AB4289C6F9200BE379A /* StudentsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F41CB23328A6712D004D8A51 /* View */,
 				F41F8AB5289C6FAF00BE379A /* ViewModel */,
 			);
 			path = StudentsScreen;
@@ -299,6 +310,7 @@
 			files = (
 				F42B19542885C293009D0540 /* StartViewController.swift in Sources */,
 				F41F8AAF289C025A00BE379A /* WandHP.swift in Sources */,
+				F41CB23528A67165004D8A51 /* StudentsScreenViewController.swift in Sources */,
 				F41F8AA6289BF44200BE379A /* DataFetcherService.swift in Sources */,
 				F42B19502885C293009D0540 /* AppDelegate.swift in Sources */,
 				F42B19662885C38D009D0540 /* NetworkService.swift in Sources */,
