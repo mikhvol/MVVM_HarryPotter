@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA54BA457AD9D08836AC840F /* Pods_MVVM_HarryPotter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBADA87F581D8CDC22A03C43 /* Pods_MVVM_HarryPotter.framework */; };
+		F41CB23128A66BFC004D8A51 /* StartMainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41CB23028A66BFC004D8A51 /* StartMainScreenViewModel.swift */; };
 		F41F8AA2289BE0B200BE379A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */; };
 		F41F8AA6289BF44200BE379A /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA5289BF44200BE379A /* DataFetcherService.swift */; };
 		F41F8AAA289BFF0F00BE379A /* CharacterHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7C663C9DDB9EA102E0C2B71F /* Pods-MVVM_HarryPotter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.release.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.release.xcconfig"; sourceTree = "<group>"; };
 		E46A2F765C72C952D47AA772 /* Pods-MVVM_HarryPotter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_HarryPotter.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_HarryPotter/Pods-MVVM_HarryPotter.debug.xcconfig"; sourceTree = "<group>"; };
+		F41CB23028A66BFC004D8A51 /* StartMainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMainScreenViewModel.swift; sourceTree = "<group>"; };
 		F41F8AA1289BE0B200BE379A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		F41F8AA5289BF44200BE379A /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		F41F8AA9289BFF0F00BE379A /* CharacterHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHP.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		F41F8AB3289C6F3500BE379A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F41CB23028A66BFC004D8A51 /* StartMainScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				F42B19692885C461009D0540 /* NetworkDataFetcher.swift in Sources */,
 				F41F8AA2289BE0B200BE379A /* UIButton+Ext.swift in Sources */,
 				F41F8AAA289BFF0F00BE379A /* CharacterHP.swift in Sources */,
+				F41CB23128A66BFC004D8A51 /* StartMainScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

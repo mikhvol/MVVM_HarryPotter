@@ -14,7 +14,7 @@ class StartViewController: UIViewController {
     var ravenclawButtonOnTap:  (() -> ())?
     var slytherinButtonOnTap:  (() -> ())?
     
-    var viewModel = StudentsScreenViewModel()
+    var viewModel = StartMainScreenViewModel()
     
     //MARK:- Lifecycle
     override func loadView() {
@@ -33,7 +33,11 @@ class StartViewController: UIViewController {
         gryffindorButtonOnTap = {
             print("gryffindorButtonOnTap")
             self.viewModel.getCharachters { charachters in
-                print(charachters!.first!.name)
+                guard let charachters = charachters else { return }
+                for char in charachters {
+                    print(char.house)
+                }
+                
             }
         }
         
