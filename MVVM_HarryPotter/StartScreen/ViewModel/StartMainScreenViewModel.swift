@@ -19,7 +19,7 @@ struct StartMainScreenViewModel {
                 return
             }
             
-            DispatchQueue.global().async {
+            DispatchQueue.main.async {
                 complition(charachtersHP)
             }
         }
